@@ -1,0 +1,38 @@
+{
+  "submission_id": "024d3fb486e7",
+  "hash": "0x024d3fb486e7",
+  "status": "pending",
+  "verdict": "pending",
+  "gate": null,
+  "prompt_version": null,
+  "models_used": [],
+  "reasoning": "received, awaiting review",
+  "self_check": null,
+  "submission": {
+    "task": "TEST ONLY - build a tiny benchmark scaffold",
+    "criterion": "TEST ONLY - endpoint returns JSON with ok=true and score fields.",
+    "axes": [
+      "behavior",
+      "scaffold"
+    ],
+    "plan": "TEST ONLY - smoke test for ledger write path.",
+    "endpoint": "https://example.com",
+    "repo": "https://github.com/Protocol-zero-0/token-ignition",
+    "baselineEndpoint": "https://example.com",
+    "baselineRepo": "https://github.com/Protocol-zero-0/token-ignition-ledger",
+    "contact_present": true,
+    "contact_encrypted": "G8yM/UbM5+rO3hsiWWXSGcMbHmOwr0wF/9VXiR9m2fmi0wux85914AQbyuA="
+  },
+  "evidence": {},
+  "ts": 1777234064,
+  "updated_at": 1777234064,
+  "history": [
+    {
+      "status": "pending",
+      "verdict": "pending",
+      "gate": null,
+      "ts": 1777234064,
+      "source": "submit"
+    }
+  ]
+}

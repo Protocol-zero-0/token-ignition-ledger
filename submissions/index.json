@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "submission_id": "024d3fb486e7",
+    "hash": "0x024d3fb486e7",
+    "status": "pending",
+    "verdict": "pending",
+    "ts": 1777234064,
+    "updated_at": 1777234064,
+    "axes": [
+      "behavior",
+      "scaffold"
+    ],
+    "repo": "https://github.com/Protocol-zero-0/token-ignition",
+    "endpoint": "https://example.com",
+    "baselineRepo": "https://github.com/Protocol-zero-0/token-ignition-ledger",
+    "baselineEndpoint": "https://example.com",
+    "task_excerpt": "TEST ONLY - build a tiny benchmark scaffold"
+  }
+]

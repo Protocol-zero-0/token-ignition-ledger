@@ -1,13 +1,20 @@
 {
   "submission_id": "dfb076711fb7",
   "hash": "0xdfb076711fb7",
-  "status": "pending",
-  "verdict": "pending",
-  "gate": null,
-  "prompt_version": null,
-  "models_used": [],
-  "reasoning": "received, awaiting review",
-  "self_check": null,
+  "status": "rejected",
+  "verdict": "rejected",
+  "gate": "gate.1",
+  "prompt_version": "gate.1.v1",
+  "models_used": [
+    "gpt-5"
+  ],
+  "reasoning": "The submission fails the floor on field quality and completeness: `task`, `criterion`, and `plan` are placeholder-level values (\"test\", \"test\", \"try\") rather than a serious, coherent self-evolving system description, and `contact` is missing. The main endpoint is reachable and AI-readable as plain text, and the baseline URL is also reachable as HTML, so criteria 2 and 3 are met. However, criteria 1, 4, and 5 fail because the plan does not describe a system beyond a trivial prompt-like stub, the criterion is not concrete or machine-verifiable, and the submission is not a serious attempt; criterion 6 is also weak because the baseline artifact is just the same GitHub repo URL rather than a clear minimal ablation endpoint/repo pair for the same task.",
+  "self_check": {
+    "evidence_sufficiency": "sufficient",
+    "suspected_injection": false,
+    "tool_failures": 0,
+    "free_note": "Endpoint accessibility was clear, and the rejection rests mainly on obviously placeholder submission fields and missing contact."
+  },
   "submission": {
     "task": "test",
     "criterion": "test",
@@ -22,9 +29,37 @@
     "contact_present": true,
     "contact_encrypted": "CviRf7U7XmqzlhGt+qDRn2Pdcit77XjKs760tP3gC/jW"
   },
-  "evidence": {},
+  "evidence": {
+    "submitted_fields": {
+      "task": "test",
+      "criterion": "test",
+      "axes": [
+        "behavior"
+      ],
+      "plan": "try",
+      "endpoint": "https://raw.githubusercontent.com/Token-insane/workflows/main/README.md",
+      "repo": "https://github.com/Token-insane/workflows",
+      "baselineEndpoint": "https://github.com/Token-insane/workflows",
+      "baselineRepo": "https://github.com/Token-insane/workflows",
+      "contact_present": false
+    },
+    "fetches": [
+      {
+        "url": "https://raw.githubusercontent.com/Token-insane/workflows/main/README.md",
+        "status_code": 200,
+        "content_type": "text/plain; charset=utf-8",
+        "body_slice": "# workflows\n\n这个仓库用于沉淀可复用的 AI 工作流、agent orchestration 和 playbook。"
+      },
+      {
+        "url": "https://github.com/Token-insane/workflows",
+        "status_code": 200,
+        "content_type": "text/html; charset=utf-8",
+        "body_slice": "<title>GitHub - Token-insane/workflows: AI 工作流、agent orchestration 与可复用 playbook</title>"
+      }
+    ]
+  },
   "ts": 1777321493,
-  "updated_at": 1777321493,
+  "updated_at": 1777321521,
   "history": [
     {
       "status": "pending",
@@ -32,6 +67,16 @@
       "gate": null,
       "ts": 1777321493,
       "source": "submit"
+    },
+    {
+      "status": "rejected",
+      "verdict": "rejected",
+      "gate": "gate.1",
+      "prompt_version": "gate.1.v1",
+      "models_used": [
+        "gpt-5"
+      ],
+      "ts": 1777321521
     }
   ]
 }

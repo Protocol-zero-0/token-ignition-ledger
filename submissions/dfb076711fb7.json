@@ -1,0 +1,37 @@
+{
+  "submission_id": "dfb076711fb7",
+  "hash": "0xdfb076711fb7",
+  "status": "pending",
+  "verdict": "pending",
+  "gate": null,
+  "prompt_version": null,
+  "models_used": [],
+  "reasoning": "received, awaiting review",
+  "self_check": null,
+  "submission": {
+    "task": "test",
+    "criterion": "test",
+    "axes": [
+      "behavior"
+    ],
+    "plan": "try",
+    "endpoint": "https://raw.githubusercontent.com/Token-insane/workflows/main/README.md",
+    "repo": "https://github.com/Token-insane/workflows",
+    "baselineEndpoint": "https://github.com/Token-insane/workflows",
+    "baselineRepo": "https://github.com/Token-insane/workflows",
+    "contact_present": true,
+    "contact_encrypted": "CviRf7U7XmqzlhGt+qDRn2Pdcit77XjKs760tP3gC/jW"
+  },
+  "evidence": {},
+  "ts": 1777321493,
+  "updated_at": 1777321493,
+  "history": [
+    {
+      "status": "pending",
+      "verdict": "pending",
+      "gate": null,
+      "ts": 1777321493,
+      "source": "submit"
+    }
+  ]
+}

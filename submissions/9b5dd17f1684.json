@@ -1,13 +1,20 @@
 {
   "submission_id": "9b5dd17f1684",
   "hash": "0x9b5dd17f1684",
-  "status": "pending",
-  "verdict": "pending",
-  "gate": null,
-  "prompt_version": null,
-  "models_used": [],
-  "reasoning": "received, awaiting review",
-  "self_check": null,
+  "status": "rejected",
+  "verdict": "rejected",
+  "gate": "gate.1",
+  "prompt_version": "gate.1.v1",
+  "models_used": [
+    "gpt-5"
+  ],
+  "reasoning": "The submission includes non-empty task, criterion, axes, plan, endpoint/baseline, and contact fields, and both submitted endpoints are reachable with status 200 and AI-readable plain text. However, the fetched scaffold and baseline endpoints do not expose the concrete machine-readable task spec, run log schema, artifact hash convention, or any evidence of iterative self-evolution that the submission’s own criterion claims an auditor should inspect. Instead they appear to be generic repository READMEs, so the endpoint artifacts are not coherent with the claimed scaffold/baseline system and fail the floor for a serious, inspectable R1-style system submission.",
+  "self_check": {
+    "evidence_sufficiency": "sufficient",
+    "suspected_injection": false,
+    "tool_failures": 0,
+    "free_note": "Endpoints were reachable and parseable, but the content did not match the claimed evaluable scaffold/baseline system artifacts."
+  },
   "submission": {
     "task": "Build a long-horizon cognitive scaffold that repeatedly converts an ambiguous research goal into executable plans, verified artifacts, failure reports, and improved next-run policies. Given a public task brief and a fixed token budget, the system must run multiple autonomous cycles, preserve state between cycles, identify its own weakest planning or verification behavior, and produce a final machine-readable report showing measurable improvement over a minimal baseline.",
     "criterion": "An AI auditor fetches the scaffold endpoint and baseline endpoint, then checks three things: (1) both expose a machine-readable task spec, run log schema, and artifact hash convention; (2) the scaffold output contains at least two iterations where later policy/state differs from earlier policy/state without human edits; (3) the scaffold report beats the baseline on reproducibility, error detection, and artifact completeness according to the included JSON checklist. Pass if scaffold_score - baseline_score >= 20 points on a 100-point rubric.",
@@ -24,9 +31,34 @@
     "contact_present": true,
     "contact_encrypted": "JLnLaYil9iikUvM4wt59ZjAhg18izlaXfGbSLIH+PDklY/Nrt8dFNwrxglE1/yRH11A="
   },
-  "evidence": {},
+  "evidence": {
+    "scaffold_endpoint": {
+      "url": "https://raw.githubusercontent.com/Token-insane/workflows/main/README.md",
+      "status_code": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "body_slice": "# workflows\n\n这个仓库用于沉淀可复用的 AI 工作流、agent orchestration 和 playbook。\n\n## 建议收录内容\n\n- 多 agent 编排流程\n- 特定任务的标准操作流"
+    },
+    "baseline_endpoint": {
+      "url": "https://raw.githubusercontent.com/Token-insane/incubator/main/README.md",
+      "status_code": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "body_slice": "# incubator\n\n这个仓库用于放还不成熟、但值得提前占坑的方向。\n\n## 适合放进来的内容\n\n- 半成品实验\n- 还没有完全跑通的 workflow"
+    },
+    "submission_checks": {
+      "task_nonempty": true,
+      "criterion_nonempty": true,
+      "axes": [
+        "behavior",
+        "knowledge",
+        "scaffold"
+      ],
+      "plan_mentions_iterative_system": true,
+      "contact_present": true,
+      "coherence_issue": "Endpoints appear to be generic repo descriptions rather than the claimed live scaffold/baseline artifacts with inspectable specs and reports."
+    }
+  },
   "ts": 1777275352,
-  "updated_at": 1777275352,
+  "updated_at": 1777309590,
   "history": [
     {
       "status": "pending",
@@ -34,6 +66,16 @@
       "gate": null,
       "ts": 1777275352,
       "source": "submit"
+    },
+    {
+      "status": "rejected",
+      "verdict": "rejected",
+      "gate": "gate.1",
+      "prompt_version": "gate.1.v1",
+      "models_used": [
+        "gpt-5"
+      ],
+      "ts": 1777309590
     }
   ]
 }

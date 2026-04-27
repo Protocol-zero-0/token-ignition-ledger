@@ -1,5 +1,23 @@
 [
   {
+    "submission_id": "9b5dd17f1684",
+    "hash": "0x9b5dd17f1684",
+    "status": "pending",
+    "verdict": "pending",
+    "ts": 1777275352,
+    "updated_at": 1777275352,
+    "axes": [
+      "behavior",
+      "knowledge",
+      "scaffold"
+    ],
+    "repo": "https://github.com/Token-insane/workflows",
+    "endpoint": "https://raw.githubusercontent.com/Token-insane/workflows/main/README.md",
+    "baselineRepo": "https://github.com/Token-insane/incubator",
+    "baselineEndpoint": "https://raw.githubusercontent.com/Token-insane/incubator/main/README.md",
+    "task_excerpt": "Build a long-horizon cognitive scaffold that repeatedly converts an ambiguous research goal into executable plans, verified artifacts, failure reports, and improved next-run polici"
+  },
+  {
     "submission_id": "024d3fb486e7",
     "hash": "0x024d3fb486e7",
     "status": "pending",

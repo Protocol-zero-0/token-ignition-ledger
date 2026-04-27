@@ -1,0 +1,39 @@
+{
+  "submission_id": "9b5dd17f1684",
+  "hash": "0x9b5dd17f1684",
+  "status": "pending",
+  "verdict": "pending",
+  "gate": null,
+  "prompt_version": null,
+  "models_used": [],
+  "reasoning": "received, awaiting review",
+  "self_check": null,
+  "submission": {
+    "task": "Build a long-horizon cognitive scaffold that repeatedly converts an ambiguous research goal into executable plans, verified artifacts, failure reports, and improved next-run policies. Given a public task brief and a fixed token budget, the system must run multiple autonomous cycles, preserve state between cycles, identify its own weakest planning or verification behavior, and produce a final machine-readable report showing measurable improvement over a minimal baseline.",
+    "criterion": "An AI auditor fetches the scaffold endpoint and baseline endpoint, then checks three things: (1) both expose a machine-readable task spec, run log schema, and artifact hash convention; (2) the scaffold output contains at least two iterations where later policy/state differs from earlier policy/state without human edits; (3) the scaffold report beats the baseline on reproducibility, error detection, and artifact completeness according to the included JSON checklist. Pass if scaffold_score - baseline_score >= 20 points on a 100-point rubric.",
+    "axes": [
+      "behavior",
+      "knowledge",
+      "scaffold"
+    ],
+    "plan": "The scaffold runs in cycles. Each cycle reads the task brief, loads prior memory, proposes a plan, executes the smallest verifiable slice, records intermediate artifacts, runs self-checks, and writes a failure analysis. A policy-updater then changes the next cycle planning checklist, retrieval notes, stop criteria, or verification order based only on logged failures and measured scores. The next run must consume the updated policy file rather than a human-edited prompt. The run stops when the score plateaus for two cycles or when the token budget is exhausted. The baseline uses the same model and task but only performs one plan-execute-report pass with no persistent memory and no policy update.",
+    "endpoint": "https://raw.githubusercontent.com/Token-insane/workflows/main/README.md",
+    "repo": "https://github.com/Token-insane/workflows",
+    "baselineEndpoint": "https://raw.githubusercontent.com/Token-insane/incubator/main/README.md",
+    "baselineRepo": "https://github.com/Token-insane/incubator",
+    "contact_present": true,
+    "contact_encrypted": "JLnLaYil9iikUvM4wt59ZjAhg18izlaXfGbSLIH+PDklY/Nrt8dFNwrxglE1/yRH11A="
+  },
+  "evidence": {},
+  "ts": 1777275352,
+  "updated_at": 1777275352,
+  "history": [
+    {
+      "status": "pending",
+      "verdict": "pending",
+      "gate": null,
+      "ts": 1777275352,
+      "source": "submit"
+    }
+  ]
+}

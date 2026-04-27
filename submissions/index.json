@@ -2,10 +2,11 @@
   {
     "submission_id": "9b5dd17f1684",
     "hash": "0x9b5dd17f1684",
-    "status": "pending",
-    "verdict": "pending",
+    "status": "rejected",
+    "verdict": "rejected",
+    "gate": "gate.1",
     "ts": 1777275352,
-    "updated_at": 1777275352,
+    "updated_at": 1777309590,
     "axes": [
       "behavior",
       "knowledge",

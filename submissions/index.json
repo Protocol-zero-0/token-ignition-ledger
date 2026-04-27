@@ -2,10 +2,11 @@
   {
     "submission_id": "dfb076711fb7",
     "hash": "0xdfb076711fb7",
-    "status": "pending",
-    "verdict": "pending",
+    "status": "rejected",
+    "verdict": "rejected",
+    "gate": "gate.1",
     "ts": 1777321493,
-    "updated_at": 1777321493,
+    "updated_at": 1777321521,
     "axes": [
       "behavior"
     ],
@@ -14,6 +15,24 @@
     "baselineRepo": "https://github.com/Token-insane/workflows",
     "baselineEndpoint": "https://github.com/Token-insane/workflows",
     "task_excerpt": "test"
+  },
+  {
+    "submission_id": "024d3fb486e7",
+    "hash": "0x024d3fb486e7",
+    "status": "rejected",
+    "verdict": "rejected",
+    "gate": "gate.1",
+    "ts": 1777234064,
+    "updated_at": 1777309618,
+    "axes": [
+      "behavior",
+      "scaffold"
+    ],
+    "repo": "https://github.com/Protocol-zero-0/token-ignition",
+    "endpoint": "https://example.com",
+    "baselineRepo": "https://github.com/Protocol-zero-0/token-ignition-ledger",
+    "baselineEndpoint": "https://example.com",
+    "task_excerpt": "TEST ONLY - build a tiny benchmark scaffold"
   },
   {
     "submission_id": "9b5dd17f1684",
@@ -33,23 +52,5 @@
     "baselineRepo": "https://github.com/Token-insane/incubator",
     "baselineEndpoint": "https://raw.githubusercontent.com/Token-insane/incubator/main/README.md",
     "task_excerpt": "Build a long-horizon cognitive scaffold that repeatedly converts an ambiguous research goal into executable plans, verified artifacts, failure reports, and improved next-run polici"
-  },
-  {
-    "submission_id": "024d3fb486e7",
-    "hash": "0x024d3fb486e7",
-    "status": "rejected",
-    "verdict": "rejected",
-    "gate": "gate.1",
-    "ts": 1777234064,
-    "updated_at": 1777309618,
-    "axes": [
-      "behavior",
-      "scaffold"
-    ],
-    "repo": "https://github.com/Protocol-zero-0/token-ignition",
-    "endpoint": "https://example.com",
-    "baselineRepo": "https://github.com/Protocol-zero-0/token-ignition-ledger",
-    "baselineEndpoint": "https://example.com",
-    "task_excerpt": "TEST ONLY - build a tiny benchmark scaffold"
   }
 ]

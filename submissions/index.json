@@ -1,5 +1,23 @@
 [
   {
+    "submission_id": "024d3fb486e7",
+    "hash": "0x024d3fb486e7",
+    "status": "rejected",
+    "verdict": "rejected",
+    "gate": "gate.1",
+    "ts": 1777234064,
+    "updated_at": 1777309618,
+    "axes": [
+      "behavior",
+      "scaffold"
+    ],
+    "repo": "https://github.com/Protocol-zero-0/token-ignition",
+    "endpoint": "https://example.com",
+    "baselineRepo": "https://github.com/Protocol-zero-0/token-ignition-ledger",
+    "baselineEndpoint": "https://example.com",
+    "task_excerpt": "TEST ONLY - build a tiny benchmark scaffold"
+  },
+  {
     "submission_id": "9b5dd17f1684",
     "hash": "0x9b5dd17f1684",
     "status": "rejected",
@@ -17,22 +35,5 @@
     "baselineRepo": "https://github.com/Token-insane/incubator",
     "baselineEndpoint": "https://raw.githubusercontent.com/Token-insane/incubator/main/README.md",
     "task_excerpt": "Build a long-horizon cognitive scaffold that repeatedly converts an ambiguous research goal into executable plans, verified artifacts, failure reports, and improved next-run polici"
-  },
-  {
-    "submission_id": "024d3fb486e7",
-    "hash": "0x024d3fb486e7",
-    "status": "pending",
-    "verdict": "pending",
-    "ts": 1777234064,
-    "updated_at": 1777234064,
-    "axes": [
-      "behavior",
-      "scaffold"
-    ],
-    "repo": "https://github.com/Protocol-zero-0/token-ignition",
-    "endpoint": "https://example.com",
-    "baselineRepo": "https://github.com/Protocol-zero-0/token-ignition-ledger",
-    "baselineEndpoint": "https://example.com",
-    "task_excerpt": "TEST ONLY - build a tiny benchmark scaffold"
   }
 ]

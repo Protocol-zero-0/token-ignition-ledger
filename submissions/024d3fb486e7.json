@@ -1,13 +1,20 @@
 {
   "submission_id": "024d3fb486e7",
   "hash": "0x024d3fb486e7",
-  "status": "pending",
-  "verdict": "pending",
-  "gate": null,
-  "prompt_version": null,
-  "models_used": [],
-  "reasoning": "received, awaiting review",
-  "self_check": null,
+  "status": "rejected",
+  "verdict": "rejected",
+  "gate": "gate.1",
+  "prompt_version": "gate.1.v1",
+  "models_used": [
+    "gpt-5"
+  ],
+  "reasoning": "This submission fails the non-empty/coherent-field requirement because the task, criterion, and plan explicitly say \"TEST ONLY\" and read as placeholder text rather than a serious attempt. The endpoint is reachable and AI-readable (https://example.com returned 200 with simple HTML), and a baseline artifact is nominally present, but both scaffold and baseline endpoints point to the generic Example Domain rather than a task-specific system artifact. The plan also does not describe a real iterative self-evolving system, only a smoke test, so the submission does not clear the gate.1 floor.",
+  "self_check": {
+    "evidence_sufficiency": "sufficient",
+    "suspected_injection": false,
+    "tool_failures": 0,
+    "free_note": "Endpoints were reachable and parseable, but the submission text and endpoint choice were plainly placeholder/test artifacts."
+  },
   "submission": {
     "task": "TEST ONLY - build a tiny benchmark scaffold",
     "criterion": "TEST ONLY - endpoint returns JSON with ok=true and score fields.",
@@ -23,9 +30,32 @@
     "contact_present": true,
     "contact_encrypted": "G8yM/UbM5+rO3hsiWWXSGcMbHmOwr0wF/9VXiR9m2fmi0wux85914AQbyuA="
   },
-  "evidence": {},
+  "evidence": {
+    "scaffold_endpoint": {
+      "url": "https://example.com",
+      "status_code": 200,
+      "content_type": "text/html",
+      "body_slice": "<h1>Example Domain</h1><p>This domain is for use in documentation examples without needing permission. Avoid use in operations.</p>"
+    },
+    "baseline_endpoint": {
+      "url": "https://example.com",
+      "status_code": 200,
+      "content_type": "text/html",
+      "body_slice": "<h1>Example Domain</h1><p>This domain is for use in documentation examples without needing permission. Avoid use in operations.</p>"
+    },
+    "submission_checks": {
+      "task": "TEST ONLY - build a tiny benchmark scaffold",
+      "criterion": "TEST ONLY - endpoint returns JSON with ok=true and score fields.",
+      "plan": "TEST ONLY - smoke test for ledger write path.",
+      "axes": [
+        "behavior",
+        "scaffold"
+      ],
+      "contact_present": true
+    }
+  },
   "ts": 1777234064,
-  "updated_at": 1777234064,
+  "updated_at": 1777309618,
   "history": [
     {
       "status": "pending",
@@ -33,6 +63,16 @@
       "gate": null,
       "ts": 1777234064,
       "source": "submit"
+    },
+    {
+      "status": "rejected",
+      "verdict": "rejected",
+      "gate": "gate.1",
+      "prompt_version": "gate.1.v1",
+      "models_used": [
+        "gpt-5"
+      ],
+      "ts": 1777309618
     }
   ]
 }
